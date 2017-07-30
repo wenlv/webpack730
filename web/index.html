@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+
+
+		<script>
+			<%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+		</script>
+		<% for(var inde in htmlWebpackPlugin.files.chunks){ %>  
+			<% if(key !== "main"){ %>
+				<script>
+					<%= htmlWebpackPlugin.files.chunks[inde].entry %>  <br />
+				</script>
+			<% } %>				
+		<% } %>
+	</head>
+	<body>
+		<div>测试史蒂夫是打击死</div>
+		<img src="${ require('./src/img/clothse.png') }" />
+		<!--<img src="./src/img/clothse.png" />-->
+
+		<%= htmlWebpackPlugin.options %> <br />
+		<%= htmlWebpackPlugin.options.title %> <br />
+		<div>=====================================================</div>
+		<% for(var key in htmlWebpackPlugin.options) { %>
+			<%= key %>:<%= htmlWebpackPlugin.options[key] %>  <br />
+		<% } %>
+		<div>=====================================================</div>
+		<%= htmlWebpackPlugin.files.chunks.main %>
+		<div>=====================================================</div>
+		<%= htmlWebpackPlugin.files %> <br />
+
+		
+
+
+	</body>
+</html>
