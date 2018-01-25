@@ -9,7 +9,7 @@ module.exports={
 		c:"./src/js/c.js"
 	},
 	output:{
-		path:"/webpack/web/dist",
+		path:"/webpack0730/web/dist",
 		filename:"js/[name]-bundle.js"
 		,
 		publicPath:"http://127.0.0.1:8020/webpack/web/dist/"
